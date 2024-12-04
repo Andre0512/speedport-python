@@ -172,6 +172,15 @@ class SpeedportApi:
         )
 
     @need_auth
+    async def ex5g_restore(self):
+        _LOGGER.info("Restore 5G extension...")
+        await self.api.post(
+            "data/LTE.json",
+            { "restore": "true" },
+            "html/content/internet/lte_firmware.html",
+        )
+
+    @need_auth
     async def reboot(self):
         _LOGGER.info("Reboot speedport...")
         await self.api.post(
