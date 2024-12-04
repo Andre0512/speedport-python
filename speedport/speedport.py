@@ -107,6 +107,9 @@ class Speedport:
     async def reconnect(self):
         await self.api.reconnect()
 
+    async def ex5g_restore(self):
+        await self.api.ex5g_restore()
+
     async def reboot(self):
         await self.api.reboot()
 
