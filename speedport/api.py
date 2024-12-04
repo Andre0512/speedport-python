@@ -176,7 +176,7 @@ class SpeedportApi:
         _LOGGER.info("Restore 5G extension...")
         await self.api.post(
             "data/LTE.json",
-            { "restore": "true" },
+            {"restore": "true"},
             "html/content/internet/lte_firmware.html",
         )
 
